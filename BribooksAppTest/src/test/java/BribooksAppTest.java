@@ -21,9 +21,11 @@ public class BribooksAppTest {
         WebElement getOtpBtnEl = driver.findElement(By.xpath("//button[text() = 'Get Otp']"));
         getOtpBtnEl.click();
 
+        // Pausing the script and waiting for manual OTP input
+        
         System.out.println("Please enter the OTP manually:");
         Scanner scanner = new Scanner(System.in);
-        String otp = scanner.nextLine();  // Pausing the script and waiting for manual OTP input
+        String otp = scanner.nextLine();  
 
         List<WebElement> otpDigitsEls = driver.findElements(By.xpath("//div[@class='otp']/div/input"));
 
